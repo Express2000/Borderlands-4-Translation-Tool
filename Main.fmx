@@ -1,0 +1,169 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'BL4 Translation Tool'
+  ClientHeight = 562
+  ClientWidth = 1084
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Position.X = 720.000000000000000000
+    Position.Y = 283.000000000000000000
+    Size.Width = 337.000000000000000000
+    Size.Height = 174.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Viewport.Width = 337.000000000000000000
+    Viewport.Height = 174.000000000000000000
+  end
+  object MainLayout: TLayout
+    Align = Client
+    Margins.Left = 8.000000000000000000
+    Margins.Top = 8.000000000000000000
+    Margins.Right = 8.000000000000000000
+    Margins.Bottom = 8.000000000000000000
+    Size.Width = 1068.000000000000000000
+    Size.Height = 546.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object TopLayout: TLayout
+      Align = Top
+      Size.Width = 1068.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object SearchEdit: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Client
+        TabOrder = 0
+        Size.Width = 848.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        object SearchEditButton1: TSearchEditButton
+          Touch.InteractiveGestures = [LongTap]
+          CanFocus = False
+          Cursor = crArrow
+          TextSettings.Trimming = None
+          Size.Width = 28.000000000000000000
+          Size.Height = 31.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          OnClick = SearchEditButton1Click
+        end
+      end
+      object CheckBox1: TCheckBox
+        Align = Right
+        Margins.Left = 8.000000000000000000
+        Position.X = 856.000000000000000000
+        Size.Width = 212.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = #1050#1086#1087#1080#1088#1086#1074#1072#1090#1100' '#1088#1077#1079#1091#1083#1100#1090#1072#1090
+      end
+    end
+    object GridLayout: TLayout
+      Align = Client
+      Margins.Top = 8.000000000000000000
+      Margins.Bottom = 8.000000000000000000
+      Size.Width = 1068.000000000000000000
+      Size.Height = 458.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object SRGrid: TStringGrid
+        Align = Client
+        CanFocus = True
+        ClipChildren = True
+        Size.Width = 1068.000000000000000000
+        Size.Height = 458.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        RowCount = 0
+        Viewport.Width = 1068.000000000000000000
+        Viewport.Height = 458.000000000000000000
+        object StringColumn1: TStringColumn
+          Header = 'ID'
+          HeaderSettings.TextSettings.WordWrap = False
+          Size.Width = 50.000000000000000000
+        end
+        object StringColumn2: TStringColumn
+          Header = 'Section'
+          HeaderSettings.TextSettings.WordWrap = False
+          Size.Width = 120.000000000000000000
+        end
+        object StringColumn3: TStringColumn
+          Header = 'Key'
+          HeaderSettings.TextSettings.WordWrap = False
+          Size.Width = 200.000000000000000000
+        end
+        object StringColumn4: TStringColumn
+          Header = 'English'
+          HeaderSettings.TextSettings.WordWrap = False
+          Size.Width = 300.000000000000000000
+        end
+        object StringColumn5: TStringColumn
+          Header = 'Russian'
+          HeaderSettings.TextSettings.WordWrap = False
+          Size.Width = 300.000000000000000000
+        end
+      end
+    end
+    object BottomLayout: TLayout
+      Align = Bottom
+      Position.Y = 509.000000000000000000
+      Size.Width = 1068.000000000000000000
+      Size.Height = 37.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object ProgressBar1: TProgressBar
+        Align = MostRight
+        Orientation = Horizontal
+        Position.X = 808.000000000000000000
+        Size.Width = 260.000000000000000000
+        Size.Height = 37.000000000000000000
+        Size.PlatformDefault = False
+        object TimeLabel: TLabel
+          Align = Client
+          Margins.Left = 16.000000000000000000
+          Size.Width = 244.000000000000000000
+          Size.Height = 37.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'listboxheaderlabel'
+          Text = '--:--'
+          TabOrder = 64
+        end
+      end
+      object LoadButton: TButton
+        Align = Left
+        Margins.Right = 8.000000000000000000
+        Size.Width = 185.000000000000000000
+        Size.Height = 37.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = #1054#1073#1085#1086#1074#1080#1090#1100' '#1073#1072#1079#1091' '#1087#1077#1088#1077#1074#1086#1076#1086#1074
+        TextSettings.Trimming = None
+        OnClick = LoadButtonClick
+      end
+      object StatusLabel: TLabel
+        Align = Client
+        Size.Width = 615.000000000000000000
+        Size.Height = 37.000000000000000000
+        Size.PlatformDefault = False
+        Text = #1054#1078#1080#1076#1072#1085#1080#1077
+        TabOrder = 0
+      end
+    end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    Left = 552
+    Top = 171
+  end
+end
